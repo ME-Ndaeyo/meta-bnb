@@ -1,4 +1,5 @@
 .hero_section{
+    margin-top: 2.6rem;
     display: flex;
     align-items: center;
 }
@@ -6,7 +7,7 @@
 .hero_text{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
     margin-inline-end: 1.6rem;
 }
 
@@ -72,14 +73,18 @@
     }
     
     .hero_text{
-        width: 90%;
+        width: 95%;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
     
     .hero_text h1{
-        font-size: 2.8rem;
+        font-size: 2.6rem;
+    }
+
+    .hero_text p{
+        font-size: 1.25rem;
     }
     
     .hero_image{
