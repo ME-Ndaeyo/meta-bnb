@@ -1,0 +1,43 @@
+header{
+    display: flex;
+    padding: 2.4rem 3.8rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    width: 40%;
+}
+
+.linksList{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.linksListItem>*{
+    color: #111;
+}
+
+.connect_wallet{
+    border: none;
+    background-color: #A02279;
+    color: #fff;
+    height: 2.4rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .linksList{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,31 @@
+.card{
+    width: 15rem;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    padding: 0.8rem 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+}
+
+.cardImage{
+    width: 100%;
+}
+
+.cardTitle, .cardDescription{
+    font-size: 0.72rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardRating{
+    display: flex;
+    align-items: center;
+}
+.cardRating>*{
+    font-size: 0.7rem;
+    padding-inline-end: 0.3rem;
+    color: #A02879;
+}

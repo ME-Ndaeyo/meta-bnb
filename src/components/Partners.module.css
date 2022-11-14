@@ -1,0 +1,9 @@
+.partners{
+    background-color: #A02879;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3.2rem;
+    padding-block: 0.6rem;
+}
