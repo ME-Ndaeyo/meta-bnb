@@ -33,6 +33,7 @@ export default function Navbar(props) {
     backgroundColor: "#fff",
     textAlign: "center",
     transition: "top 0.6s",
+    zIndex: "110"
   };
 
   return (
