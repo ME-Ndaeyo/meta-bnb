@@ -41,3 +41,21 @@
 .nft_image img{
     width: 100%;
 }
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 47.5em) {
+    .nft_section{
+        flex-direction: column-reverse;
+        row-gap: 2.4rem;
+    }
+
+    .nft_text{
+        width: 70%;
+    }
+
+    .nft_image{
+        width: 100%;
+        padding: 0;
+    }
+}

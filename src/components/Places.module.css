@@ -1,12 +1,43 @@
-.placesHeading{
-    text-align: center;
-    font-size: 2.4rem;
-    margin-block-end: 2.4rem;
+.placesHeading {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-block-end: 2.4rem;
 }
 
-.bnbs{
-    display: grid;
-    
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.8rem 1rem;
+.bnbs {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem 1rem;
+}
+.bnbs > * {
+  margin: auto;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 63.5em) {
+  .bnbs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .bnbs > * {
+    margin: auto;
+    width: 20rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 47em) {
+  .placesHeading {
+    font-size: 2rem;
+  }
+
+  .bnbs {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .bnbs > * {
+    margin: auto;
+    width: 24rem;
+  }
 }

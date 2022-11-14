@@ -4,12 +4,14 @@
 }
 
 .hero_text{
+    display: flex;
+    flex-direction: column;
     width: 60%;
     margin-inline-end: 1.6rem;
 }
 
 .hero_text h1{
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 600;
     letter-spacing: 1px;
     margin-block-end: 1.6rem;
@@ -56,4 +58,43 @@
 .hero_image{
     width: 40%;
     margin-inline-start: 1.6rem;
+}
+
+/* Tablet Responsiveness */
+@media screen and (max-width: 63.5em){
+    .hero_section{
+        flex-direction: column-reverse;
+        row-gap: 3.2rem;
+    }
+    
+    .hero_text, .hero_image{
+        margin-inline: 0;
+    }
+    
+    .hero_text{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero_text h1{
+        font-size: 2.8rem;
+    }
+    
+    .hero_image{
+        width: 70%;
+    }
+}
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 37.5em){
+    .hero_text h1{
+        font-size: 2.4rem;
+    }
+    
+    .hero_text p{
+        font-size: 1.2rem;
+    }
 }

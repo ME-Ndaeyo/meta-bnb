@@ -4,6 +4,28 @@
   font-family: 'Red Rose', cursive;
 }
 
+html{
+  font-size: 92%;
+}
+
 .item{
   padding: 3.6rem 4.2rem;
+}
+
+
+@media screen and (max-width: 76em){
+    html{
+      font-size: 82.5%;
+    }
+}
+
+
+@media screen and (max-width: 37.5em) {
+  html{
+    font-size: 62.5%;
+  }
+
+  .item{
+    padding: 2.4rem 3.2rem;
+  }
 }

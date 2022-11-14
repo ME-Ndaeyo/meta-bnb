@@ -1,5 +1,5 @@
 .card{
-    width: 15rem;
+    width: 14.5rem;
     border: 1px solid #ddd;
     border-radius: 18px;
     padding: 0.8rem 1rem;
@@ -28,4 +28,24 @@
     font-size: 0.7rem;
     padding-inline-end: 0.3rem;
     color: #A02879;
+}
+
+
+/* Tablet responsiveness */
+@media screen and (max-width: 63.5em){
+    .cardTitle, .cardDescription, .cardRating{
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 37.5em){
+    .cardTitle, .cardDescription, .cardRating{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 32em){
+    .cardTitle, .cardDescription, .cardRating{
+        font-size: 1.05rem;
+    }
 }

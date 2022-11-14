@@ -7,3 +7,20 @@
     padding-inline: 3.2rem;
     padding-block: 0.6rem;
 }
+
+@media screen and (max-width: 63.5em){
+    
+    .partners{
+        justify-content: space-between;
+        padding-inline: 2.4rem;
+        padding-block: 0.2rem;
+    }
+
+    .partner{
+        width: 25%;
+    }
+
+    .partner img{
+        width: 100%;
+    }
+}

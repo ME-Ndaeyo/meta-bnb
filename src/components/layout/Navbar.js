@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 import logo from "../../resources/logo-colored.png";
 
-export default function Navbar() {
+export default function Navbar(props) {
+
   return (
     <header>
       <img src={logo} alt="Metabnb logo" className={classes.logo} />
@@ -21,8 +22,9 @@ export default function Navbar() {
             <Link to="./">Community</Link>
           </li>
         </ul>
+      <button className={classes.connect_wallet} onClick={()=> props.eventHandler()}>Connect Wallet</button>
       </nav>
-      <button className={classes.connect_wallet}>Connect Wallet</button>
+      
     </header>
   );
 }

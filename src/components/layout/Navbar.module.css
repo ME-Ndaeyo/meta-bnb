@@ -10,14 +10,22 @@ a{
     text-decoration: none;
 }
 
+header img{
+    width: 15%;
+}
+
 nav{
-    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .linksList{
     display: flex;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 80%;
 }
 
 .linksListItem>*{
@@ -32,12 +40,47 @@ nav{
     padding: 0.2rem 0.8rem;
     border-radius: 6px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 
+@media screen and (max-width: 63.5em){
+    header img{
+        width: 17.5%;
+    }
 
-@media screen and (max-width: 600px){
-    .linksList{
-        flex-direction: column;
+    .connect_wallet{
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width: 42.5em){
+    header{
+        padding: 1.4rem 2.4rem;
+    }
+
+    header img{
+        width: 20%;
+    }
+    
+
+    .connect_wallet{
+        height: 1.6rem;
+        padding: 0.4rem;
+        font-size: 0.72rem;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (max-width: 32em){
+    html{
+        font-size: 50%;
+    }
+
+    header img{
+        width: 17.5%;
     }
 }
