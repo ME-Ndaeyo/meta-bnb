@@ -77,10 +77,10 @@ nav{
 
 @media screen and (max-width: 32em){
     html{
-        font-size: 50%;
+        font-size: 53%;
     }
 
     header img{
-        width: 17.5%;
+        width: 19%;
     }
 }

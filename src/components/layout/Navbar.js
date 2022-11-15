@@ -28,8 +28,8 @@ export default function Navbar(props) {
 
   const navbarStyles = {
     position: "fixed",
-    height: "1.2rem",
-    width: "91.5%",
+    height: "1.4rem",
+    width: "92%",
     backgroundColor: "#fff",
     textAlign: "center",
     transition: "top 0.6s",
