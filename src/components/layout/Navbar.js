@@ -1,45 +1,49 @@
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import classes from "./Navbar.module.css";
 import logo from "../../resources/logo-colored.png";
-import debounce from "../../utilities/Helper";
+
 
 export default function Navbar(props) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
-  const handleScroll = debounce(() => {
+  const handleScroll = useEffect(() => {
     const currentScrollPos = window.pageYOffset;
 
     setVisible(
       (prevScrollPos > currentScrollPos &&
         prevScrollPos - currentScrollPos > 70) ||
-        currentScrollPos < 10
+        currentScrollPos < 20
     );
 
     setPrevScrollPos(currentScrollPos);
-  }, 100);
+  }, [prevScrollPos]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible, handleScroll]);
+  }, [prevScrollPos, handleScroll]);
 
   const navbarStyles = {
     position: "fixed",
-    height: "1.4rem",
+    height: "2.2rem",
     width: "92%",
     backgroundColor: "#fff",
     textAlign: "center",
-    transition: "top 0.6s",
+    transition: "top 0.2s",
     zIndex: "110"
   };
 
   return (
-    <header style={{...navbarStyles, top: visible? '0': '-0.2rem'}}>
+    <header style={{ ...navbarStyles, top: visible ? "0" : "-0.2rem" }}>
       <img src={logo} alt="Metabnb logo" className={classes.logo} />
-      <nav>
+
+      <nav
+        className={visible ? classes.navToggle : classes.nav}
+        onClick={() => setVisible(false)}
+      >
         <ul className={classes.linksList}>
           <li className={classes.linksListItem}>
             <Link to="./">Home</Link>
@@ -54,9 +58,21 @@ export default function Navbar(props) {
             <Link to="./">Community</Link>
           </li>
         </ul>
-      <button className={classes.connect_wallet} onClick={()=> props.eventHandler()}>Connect Wallet</button>
+        <button
+          className={classes.connect_wallet}
+          onClick={() => props.eventHandler()}
+        >
+          Connect Wallet
+        </button>
       </nav>
-      
+
+      <button className={classes.menu} onClick={() => setVisible(!visible)}>
+        {visible ? (
+          <ion-icon name="close-outline"></ion-icon>
+        ) : (
+          <ion-icon name="menu-outline"></ion-icon>
+        )}
+      </button>
     </header>
   );
 }

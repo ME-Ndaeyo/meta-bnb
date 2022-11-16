@@ -1,86 +1,118 @@
-header{
-    display: flex;
-    padding: 2.4rem 3.8rem;
-    align-items: center;
-    justify-content: space-between;
+header {
+  display: flex;
+  padding: 2.4rem 3.8rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-header img{
-    width: 15%;
+header img {
+  width: 15%;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
 }
 
-.linksList{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-    width: 80%;
+.linksList {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  width: 80%;
 }
 
-.linksListItem>*{
-    color: #111;
+.linksListItem > * {
+  color: #111;
 }
 
-.connect_wallet{
-    border: none;
-    background-color: #A02279;
+.connect_wallet {
+  border: none;
+  background-color: #a02279;
+  color: #fff;
+  height: 2.4rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 63.5em) {
+  header img {
+    width: 17.5%;
+  }
+
+  .linksListItem > * {
     color: #fff;
-    height: 2.4rem;
-    padding: 0.2rem 0.8rem;
-    border-radius: 6px;
-    cursor: pointer;
+  }
+
+  .connect_wallet {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .nav {
+    opacity: 0;
+    display: none;
+  }
+
+  .navToggle {
+    opacity: 1;
     display: flex;
-    align-items: center;
+    font-size: 1.2rem;
+    background-color: #222;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 2.2rem;
+    right: 0;
+    width: 100%;
+    height: 27vh;
+
+    transform: translate(0%, 3.8rem);
+  }
+
+  .menu {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
 }
 
+@media screen and (max-width: 42.5em) {
+  header {
+    padding: 1.4rem 2.4rem;
+  }
 
-@media screen and (max-width: 63.5em){
-    header img{
-        width: 17.5%;
-    }
+  header img {
+    width: 23%;
+  }
 
-    .connect_wallet{
-        padding: 0.4rem 0.6rem;
-        font-size: 0.8rem;
-    }
-}
+  .linksList {
+    flex-direction: column;
+    row-gap: 0.4rem;
+  }
 
+  .navToggle {
+    transform: translate(0%, 2.6rem);
+  }
 
-@media screen and (max-width: 42.5em){
-    header{
-        padding: 1.4rem 2.4rem;
-    }
-
-    header img{
-        width: 20%;
-    }
-    
-
-    .connect_wallet{
-        height: 1.6rem;
-        padding: 0.4rem;
-        font-size: 0.72rem;
-        border-radius: 4px;
-    }
-}
-
-@media screen and (max-width: 32em){
-    html{
-        font-size: 53%;
-    }
-
-    header img{
-        width: 19%;
-    }
+  .connect_wallet {
+    height: 1.6rem;
+    padding: 1rem 0.6rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
 }

@@ -29,3 +29,9 @@ html{
     padding: 2.4rem 3.2rem;
   }
 }
+
+@media screen and (max-width: 32em){
+  html {
+    font-size: 67.5%;
+  }
+} 
