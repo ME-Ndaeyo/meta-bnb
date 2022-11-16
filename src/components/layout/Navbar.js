@@ -41,8 +41,8 @@ export default function Navbar(props) {
       <img src={logo} alt="Metabnb logo" className={classes.logo} />
 
       <nav
-        className={visible ? classes.navToggle : classes.nav}
-        onClick={() => setVisible(false)}
+        className={!visible ? classes.navToggle : classes.nav}
+        onClick={() => setVisible(true)}
       >
         <ul className={classes.linksList}>
           <li className={classes.linksListItem}>
@@ -68,9 +68,9 @@ export default function Navbar(props) {
 
       <button className={classes.menu} onClick={() => setVisible(!visible)}>
         {visible ? (
-          <ion-icon name="close-outline"></ion-icon>
-        ) : (
           <ion-icon name="menu-outline"></ion-icon>
+          ) : (
+          <ion-icon name="close-outline"></ion-icon>
         )}
       </button>
     </header>
