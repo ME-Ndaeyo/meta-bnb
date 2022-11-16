@@ -36,8 +36,15 @@
 
 /* Mobile responsiveness */
 @media screen and (max-width: 47em){
+    .headerList{
+        font-size: 72.5%;
+    }
     .headerList>:nth-child(4), .headerList>:nth-child(6), .headerList>:nth-child(7){
         display: none;
+    }
+
+    .location{
+        column-gap: 0.6rem;
     }
 
     .bnbs{
